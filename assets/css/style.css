@@ -1,0 +1,459 @@
+/* CSS RESET v2.0 | 20110126 License: none (public domain) */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+@font-face {
+  font-family: 'BryantPro-Medium';
+  src: url('BryantPro-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BryantPro-MediumItalic';
+  src: url('BryantPro-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  filter:inherit; -ms-filter:inherit;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+img {
+  display: block;
+  max-height: 100%;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: border-box;
+}
+
+body {
+  font-family: 'BryantPro-Medium';
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00030c;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  overflow: hidden;
+  max-width: 1500px;
+  transform: translateX(-50%);
+}
+.wrapper > div {
+  transition: all 0.2s;
+}
+
+
+[class^="img-"] {
+  position: absolute;
+}
+
+[class^="img-"] i {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/******************************************
+* images
+******************************************/
+.bg {
+  background-image: url(bg.jpg);
+  background-size: cover !important;
+  /*background-position: 50% 10% !important;*/
+  background-position: 50% 50% !important;
+}
+.tiles {
+  background-image: url(tiles.png);
+  background-repeat: repeat !important;
+  background-size: 50px 50px !important;
+}
+.scream {
+  background-image: url(scream.png);
+}
+.tiles2 {
+  background-image: url(tiles2.png);
+  background-repeat: repeat !important;
+  background-size: 50px 50px !important;
+}
+.btn {
+  background-image: url(btn.png);
+}
+.btn-hover {
+  background-image: url(btn-hover.png);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.desktop .img-btn:hover .btn-hover {
+  opacity: 1;
+}
+
+.click {
+  display: none;
+}
+.tap {
+  display: none;
+}
+.has-touch .click {
+  display: none;
+}
+.has-touch .tap {
+  display: inline-block;
+}
+.no-touch .click {
+  display: inline-block;
+}
+.no-touch .tap {
+  display: none;
+}
+
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+::-ms-input-placeholder { 
+  color: white;
+  opacity: 1;
+}
+
+
+/******************************************
+* position
+******************************************/
+.img-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  
+  min-width: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.img-tiles {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+.img-tiles2 {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+.img-scream {
+  /*left: 25.2%;
+  top: 5%;
+  width: 48.2%;
+  height: 18.5%;*/
+  left: 15.2%;
+  top: 5%;
+  width: 68.2%;
+  height: 18.5%;
+}
+
+.img-btn {
+  left: 37.6%;
+  top: 80.2%;
+  width: 25.1%;
+  height: 19.6%;
+  cursor: pointer;
+}
+
+.btn-txt {
+  color: white;
+  font-size: 3.1vmin;
+  position: absolute;
+  text-align: center;
+  /*width: 100%;*/
+  top: -20px;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+em {
+  font-family: 'BryantPro-MediumItalic';
+}
+
+
+.again,
+.glad,
+.type {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  font-family: 'BryantPro-Medium';
+  font-size: 45px;
+  font-size: 5vmin;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7), -2px -2px 8px rgba(0,0,0,0.7);
+}
+
+.type {
+  /*max-height: 20%;*/
+  max-height: 220px;
+  overflow: hidden;
+  /*white-space: nowrap;*/
+  opacity: 1;
+  resize: none !important;
+}
+
+.glad {
+  /*display: none;*/
+  opacity: 0;
+}
+
+.again {
+  top: 90%;
+  opacity: 0;
+}
+
+.here {
+  color: #fc0000;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.desktop .here:hover {
+  color: #95e3ee;
+}
+
+
+[frame="start"] .type {
+  /*display: block;*/
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s !important;
+}
+[frame="start"] .glad {
+  /*display: none;*/
+  visibility: hidden;
+}
+[frame="start"] .again {
+  /*display: none;*/
+  visibility: hidden;
+}
+[frame="start"] .img-btn {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s !important;
+}
+/*[frame="start"] .btn-txt {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s !important;
+}*/
+
+[frame="end"] .type {
+  /*display: none;*/
+  visibility: hidden;
+  opacity: 0;
+}
+[frame="end"] .glad {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s !important;
+}
+[frame="end"] .again {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s !important;
+}
+[frame="end"] .img-btn {
+  visibility: hidden;
+  opacity: 0;
+}
+/*[frame="end"] .btn-txt {
+  visibility: hidden;
+  opacity: 0;
+}*/
+
+
+.type-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.block {
+  /*opacity: 0;*/
+  transform: scale(0) rotate(0.01deg);
+  transition: transform 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) !important;
+  transform-style: preserve-3d;
+}
+
+
+.links {
+  position: absolute;
+  right: 1.8%;
+  bottom: 2.5%;
+  color: white;
+  font-size: 18px;
+  font-size: 1.8vmin;
+  white-space: nowrap;
+  transform: none;
+}
+
+a {
+  color: white;
+}
+.desktop a:hover {
+  color: #95e3ee;
+}
+
+
+body {
+  overflow: hidden;
+}
+
+
+#onetrust-pc-sdk.otPcTab {
+  position: absolute !important;
+  bottom: auto !important;
+}
+
+
+/******************************************
+* breakpoints
+******************************************/
+@media only screen and (min-width : 801px) and (max-height : 400px) and (orientation: landscape) {
+  .btn-txt {
+    top: -10px;
+  }
+}
+
+@media only screen and (max-width : 1024px) and (orientation: landscape) {
+  .again,
+  .glad,
+  .type {
+    font-size: 38px;
+    font-size: 4.8vmin;
+  }
+}
+
+@media only screen and (max-width : 850px) {
+  /*.again {
+    top: 81%;
+  }*/
+  /*.img-btn {
+    height: 11%;
+  }*/
+}
+@media only screen and (max-width : 800px) {
+  .img-btn {
+    left: 35%;
+    top: 75%;
+    width: 30%;
+    height: 15%;
+  }
+  .links {
+    right: 50%;
+    font-size: 1.8vmin;
+    white-space: nowrap;
+    transform: translateX(50%);
+  }
+  .again {
+    top: 81%;
+  }
+  /*.again,
+  .glad,
+  .type {
+    font-size: 33px;
+    font-size: 4.6vmin;
+  }*/
+  .btn-txt {
+    top: -10px;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  .links {
+    font-size: 10px;
+  }
+  /*.again,
+  .glad,
+  .type {
+    font-size: 28px;
+    font-size: 4.4vmin;
+  }*/
+}
+@media only screen and (max-width : 450px) {
+  .bg {
+    background-size: 160% 100% !important;
+  }
+  .btn ,
+  .btn-hover {
+    background-position: top center !important;
+  }
+  /*.again,
+  .glad,
+  .type {
+    font-size: 7vw;
+    font-size: 4.2vmin;
+  }*/
+  .img-btn {
+    left: 28%;
+    top: 77%;
+    width: 44%;
+    height: 15%;
+  }
+}
+
+@media (max-width: 900px) {
+    #onetrust-pc-sdk.otPcTab {
+        height: auto !important;
+    }
+}
